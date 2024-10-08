@@ -13,7 +13,7 @@
 
 Переглянь демо-відео, як створити бекенд-застосунок та конструктор ресурсу, щоб отримати ендпоінт `/contacts`.
 
-[![Watch video](https://raw.githubusercontent.com/and05gt/goit-react-hw-07/main/public/videoframe_0.webp)](https://raw.githubusercontent.com/and05gt/goit-react-hw-07/main/public\a90c8b29-b59a-4052-a3c9-92987e8c81092024-03-27.mp4)
+[![Watch video](./public/videoframe_0.webp)](./public/a90c8b29-b59a-4052-a3c9-92987e8c81092024-03-27.mp4)
 
 ### Форма стану
 
