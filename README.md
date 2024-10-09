@@ -13,7 +13,7 @@
 
 Переглянь демо-відео, як створити бекенд-застосунок та конструктор ресурсу, щоб отримати ендпоінт `/contacts`.
 
-<video src="./public/demo-video.mp4" width="640" height="320" controls></video>
+[![Watch video](./public/videoframe_0.webp)](https://goitlmsstorage.b-cdn.net/a90c8b29-b59a-4052-a3c9-92987e8c81092024-03-27%2018-32-29.mp4)
 
 ### Форма стану
 
