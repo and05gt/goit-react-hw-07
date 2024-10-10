@@ -1,29 +1,24 @@
 import Contact from "../Contact/Contact";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  selectContacts,
   selectError,
+  selectFilteredContacts,
   selectLoading,
 } from "../../redux/contactsSlice";
-import { selectNameFilter } from "../../redux/filtersSlice";
 import style from "./ContactList.module.css";
 import { deleteContact } from "../../redux/contactsOps";
 
 const ContactList = () => {
-  const contacts = useSelector(selectContacts);
-  const filters = useSelector(selectNameFilter);
+  const contacts = useSelector(selectFilteredContacts);
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
-  const visibleContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().trim().includes(filters.toLowerCase().trim())
-  );
   const dispatch = useDispatch();
 
   return (
     <ul className={style.contactList}>
       {loading && <h2>Loading...</h2>}
       {error && <h2>{error}</h2>}
-      {visibleContacts.map((contact) => {
+      {contacts.map((contact) => {
         return (
           <li className={style.listItem} key={contact.id}>
             <Contact
