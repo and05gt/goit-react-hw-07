@@ -5,6 +5,7 @@ import "./App.css";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchContacts } from "./redux/contactsOps";
+import { FaAddressBook } from "react-icons/fa6";
 
 function App() {
   const dispatch = useDispatch();
@@ -15,7 +16,9 @@ function App() {
 
   return (
     <div>
-      <h1 className="title">Phonebook</h1>
+      <h1 className="title">
+        <FaAddressBook size={24} /> Phonebook
+      </h1>
       <ContactForm />
       <SearchBox />
       <ContactList />

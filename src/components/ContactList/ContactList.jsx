@@ -7,6 +7,7 @@ import {
 } from "../../redux/contactsSlice";
 import style from "./ContactList.module.css";
 import { deleteContact } from "../../redux/contactsOps";
+import Loader from "../Loader/Loader";
 
 const ContactList = () => {
   const contacts = useSelector(selectFilteredContacts);
@@ -15,21 +16,23 @@ const ContactList = () => {
   const dispatch = useDispatch();
 
   return (
-    <ul className={style.contactList}>
-      {loading && <h2>Loading...</h2>}
+    <div className={style.contactListWrapper}>
+      {loading && <Loader />}
       {error && <h2>{error}</h2>}
-      {contacts.map((contact) => {
-        return (
-          <li className={style.listItem} key={contact.id}>
-            <Contact
-              name={contact.name}
-              number={contact.number}
-              onDelete={() => dispatch(deleteContact(contact.id))}
-            />
-          </li>
-        );
-      })}
-    </ul>
+      <ul className={style.contactList}>
+        {contacts.map((contact) => {
+          return (
+            <li className={style.listItem} key={contact.id}>
+              <Contact
+                name={contact.name}
+                number={contact.number}
+                onDelete={() => dispatch(deleteContact(contact.id))}
+              />
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 

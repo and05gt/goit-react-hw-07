@@ -6,5 +6,8 @@
 
 .title {
   margin-bottom: 24px;
-  display: inline-block;
+  display: inline-flex;
+  gap: 10px;
+  align-items: baseline;
+  color: #4e75ff;
 }

@@ -28,9 +28,9 @@
   cursor: pointer;
   border: none;
   outline: none;
-  background-color: #dbdbe0;
-  border: 2px solid rgba(46, 47, 66, 0.4);
+  background-color: #ff4e4e;
   border-radius: 4px;
+  color: #ffffff;
   font-family: Inter, sans-serif;
   font-size: 16px;
   padding: 8px;
@@ -42,5 +42,5 @@
 
 .btn:hover,
 .btn:focus {
-  background-color: #c5c0c0;
+  background-color: #ff7070;
 }
